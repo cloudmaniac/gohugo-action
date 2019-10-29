@@ -23,4 +23,4 @@ RUN apk update && \
     chmod +x /usr/bin/hugo && \
     rm -rf hugo_*
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["hugo"]
