@@ -1,0 +1,8 @@
+name: 'GoHugo CLI Action'
+description: 'Hugo CLI as a GitHub action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: blue
+  icon: share
