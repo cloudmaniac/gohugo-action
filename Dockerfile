@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM alpine:latest
 
 ENV HUGO_VERSION 0.59.0
 
@@ -11,10 +11,18 @@ LABEL "com.github.actions.description"="Hugo CLI as a GitHub action"
 LABEL "com.github.actions.icon"="blue"
 LABEL "com.github.actions.color"="gray-dark"
 
-RUN apt-get update
+RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
+    wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_checksums.txt && \
+    grep hugo_${HUGO_VERSION}_Linux-64bit.tar.gz hugo_${HUGO_VERSION}_checksums.txt | sha256sum -c && \
+    tar xvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
+    mv ./hugo /usr/bin && \
+    chmod +x /usr/bin/hugo && \
+    rm -rf hugo_*
 
-RUN go get github.com/gohugoio/hugo
-
-ADD entrypoint.sh /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+RUN apk -v --update add \
+        python \
+        py-pip \
+        && \
+    pip install --upgrade awscli && \
+    apk -v --purge del py-pip && \
+    rm /var/cache/apk/*
