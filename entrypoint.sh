@@ -3,6 +3,10 @@
 ls -la
 ls -la public/
 
+echo "GITHUB_WORKSPACE:"$GITHUB_WORKSPACE
+
+echo "GITHUB_REPOSITORY:"$GITHUB_REPOSITORY
+
 sh -c "hugo $*"
 
 sh -c "hugo env"
