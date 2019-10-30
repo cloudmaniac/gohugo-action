@@ -2,8 +2,13 @@
 
 ls -la
 ls -la public/
-ls -la public/posts/
 
 sh -c "hugo $*"
+
+sh -c "hugo"
+
+sh -c "hugo env"
+
+sh -c "hugo -v"
 
 ls -la public/posts/
