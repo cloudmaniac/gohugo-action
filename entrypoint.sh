@@ -1,6 +1,7 @@
 #!/bin/sh
 
-set -eux -o pipefail
+set -e
+set -x
 
 echo "GITHUB_WORKSPACE:"$GITHUB_WORKSPACE
 echo "GITHUB_REPOSITORY:"$GITHUB_REPOSITORY
