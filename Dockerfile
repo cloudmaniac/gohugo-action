@@ -13,7 +13,7 @@ LABEL "com.github.actions.color"="gray-dark"
 
 RUN apt-get update
 
-RUN go get github.com/gohugoio/hugo@stable
+RUN go get github.com/gohugoio/hugo
 
 ADD entrypoint.sh /entrypoint.sh
 
