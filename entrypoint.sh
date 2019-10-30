@@ -19,8 +19,8 @@ cd "$root_path"
 echo "Preparing to build blog"
 hugo
 echo "Building is done. Copying over generated files"
-cp -R public/* "$blog_path"/
-echo "Copy is done."
+#cp -R public/* "$blog_path"/
+echo "Copy is done...or not..."
 
 hugo deploy --dryRun
 
