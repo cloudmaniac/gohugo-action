@@ -5,6 +5,6 @@ set -x
 
 hugo env
 
-hugo deploy
+hugo && hugo deploy --invalidateCDN --maxDeletes -1
 
 exit 0
