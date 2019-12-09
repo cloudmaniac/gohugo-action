@@ -1,5 +1,5 @@
 name: 'GoHugo CLI Action'
-description: 'Hugo CLI as a GitHub action'
+description: 'Hugo CLI as a GitHub action - Generates HTML, publish on AWS S3 and invalidate CloudFront distribution'
 runs:
   using: 'docker'
   image: 'Dockerfile'
