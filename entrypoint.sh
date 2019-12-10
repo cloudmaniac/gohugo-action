@@ -9,6 +9,10 @@ ls -al
 
 ls -al /github/workspace/
 
+ls -al /github/workspace/content/
+
+ls -al /github/workspace/content/post/
+
 mkdir -p /github/workspace/public/
 
 chmod -R 777 /github/workspace/public/
