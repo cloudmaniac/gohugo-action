@@ -7,7 +7,7 @@ hugo env
 
 ls -al
 
-ls -al /github/workspace/public/
+ls -al /github/workspace/
 
 mkdir -p /github/workspace/public/
 
