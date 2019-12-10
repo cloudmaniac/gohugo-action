@@ -13,10 +13,12 @@ mkdir -p /github/workspace/public/
 
 chmod -R 777 /github/workspace/public/
 
-ls -al
+ls -la
 
 ls -la /github/workspace/public/
 
 hugo && hugo deploy --invalidateCDN --maxDeletes -1
+
+ls -la /github/workspace/public/
 
 exit 0
