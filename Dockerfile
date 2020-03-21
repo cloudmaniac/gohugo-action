@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV HUGO_VERSION 0.68
+ENV HUGO_VERSION 0.68.0
 
 LABEL repository="https://github.com/cloudmaniac/gohugo-action"
 LABEL homepage="https://cloudmaniac.net"
