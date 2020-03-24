@@ -1,3 +1,4 @@
+# Container image that runs the code
 FROM alpine:latest
 
 ENV HUGO_VERSION 0.68.0
@@ -11,6 +12,7 @@ LABEL "com.github.actions.description"="Hugo CLI as a GitHub action"
 LABEL "com.github.actions.icon"="blue"
 LABEL "com.github.actions.color"="gray-dark"
 
+# Download and install Hugo 
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
     wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_checksums.txt && \
     grep hugo_${HUGO_VERSION}_Linux-64bit.tar.gz hugo_${HUGO_VERSION}_checksums.txt | sha256sum -c && \
@@ -19,6 +21,7 @@ RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug
     chmod +x /usr/bin/hugo && \
     rm -rf hugo_*
 
+# Install AWS CLI (required for 'hugo deploy' to AWS S3)
 RUN apk -v --update add \
         python \
         py-pip \
