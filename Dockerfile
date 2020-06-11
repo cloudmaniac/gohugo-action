@@ -1,5 +1,5 @@
 # Container image that runs the code
-FROM alpine:latest
+FROM alpine:3.11.6
 
 ENV HUGO_VERSION 0.68.0
 
