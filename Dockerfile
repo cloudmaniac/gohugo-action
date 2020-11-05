@@ -1,7 +1,7 @@
 # Container image that runs the code
 FROM alpine:3.11.6
 
-ENV HUGO_VERSION 0.68.0
+ENV HUGO_VERSION 0.78.1
 
 LABEL repository="https://github.com/cloudmaniac/gohugo-action"
 LABEL homepage="https://cloudmaniac.net"
