@@ -1,7 +1,8 @@
 # Container image that runs the code
-FROM alpine:3.11.6
+# Alpine stopped providing the Python package starting in 3.12
+FROM alpine:3.11.8
 
-ENV HUGO_VERSION 0.78.1
+ENV HUGO_VERSION 0.81.0
 
 LABEL repository="https://github.com/cloudmaniac/gohugo-action"
 LABEL homepage="https://cloudmaniac.net"
