@@ -2,7 +2,7 @@
 # Alpine stopped providing the Python package starting in 3.12
 FROM alpine:3.11.8
 
-ENV HUGO_VERSION 0.82.0
+ENV HUGO_VERSION 0.92.1
 
 LABEL repository="https://github.com/cloudmaniac/gohugo-action"
 LABEL homepage="https://cloudmaniac.net"
